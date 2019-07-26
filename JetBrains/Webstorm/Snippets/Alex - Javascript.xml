@@ -1,0 +1,128 @@
+<templateSet group="Alex - Javascript">
+  <template name="=&gt;" value="($PARAMS$) =&gt; { &#10;  return $RETURN$;&#10;}$END$" description="Alex - ES6 arrow function" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="af" value="($PARAMS$) =&gt; { &#10;  return $RETURN$;&#10;}$END$" description="Alex - ES6 arrow function (Alias for =&gt;)" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="fe" value="$ARRAY$.forEach($VAR$ =&gt; $END$)" description="Alex - ES6 forEach function" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fil" value="$ARRAY$.filter($VAR$ =&gt; $END$)" description="Alex - ES6 filter function" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fori" value="for($VARKIND$ $INDEX$ = 0; $INDEX$ &lt; $LIMIT$; $INDEX$++) {&#10;  $END$&#10;}" description="Alex - Create iteration loop" toReformat="true" toShortenFQNames="true">
+    <variable name="VARKIND" expression="jsSuggestDefaultVariableKind(false)" defaultValue="var" alwaysStopAt="false" />
+    <variable name="INDEX" expression="jsSuggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LIMIT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="forin" value="for (let $VAR$ in $ARRAY$) {&#10;  $END$&#10;}" description="Alex - Iterate (for..of) - ES6" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="forof" value="for (let $VAR$ of $ARRAY$) {&#10;  $END$&#10;}" description="Alex - Iterate (for..of) - ES6" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="jsSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="im" value="import $CLASS$ from '$MODULE$';&#10;$END$" description="Alex - ES6 Default Import" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($COND$) {&#10;  $IF$&#10;}$END$" description="Alex - If condition" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="IF" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ifel" value="if ($COND$) {&#10;  $IF$&#10;} else {&#10;  $ELSE$&#10;}$END$" description="Alex - If, else construction" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="IF" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELSE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="imp" value="import { $FUNC$ } from '$MODULE$';&#10;$END$" description="Alex - ES6 Named Import" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="impa" value="import { $FUNC$ as $ALIAS$ } from '$MODULE$';&#10;$END$" description="Alex - ES6 Named Import with Alias" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ALIAS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODULE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ter" value="$COND$ ? $EXPR$ : $END$" description="Alex - Ternary operator" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="red" value="$ARRAY$.reduce(($ACC$, $CUR$) =&gt; $END$);" description="Alex - ES6 reduce function" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACC" expression="" defaultValue="&quot;acc&quot;" alwaysStopAt="true" />
+    <variable name="CUR" expression="" defaultValue="&quot;cur&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="map" value="$ARRAY$.map($VAR$ =&gt; $END$)" description="Alex - ES6 map function" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="jsArrayVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="logv" value="console.log('$MESSAGE$: ', $PARAM$);" description="Alex - Console log variable" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MESSAGE" expression="" defaultValue="PARAM" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="log" value="console.log('$MESSAGE$');" description="Alex - Console log" toReformat="true" toShortenFQNames="true">
+    <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
