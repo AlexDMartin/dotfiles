@@ -1,0 +1,89 @@
+{
+    "parser": "babel-eslint",
+    "settings": {
+        "react": {
+            "version": "require('./package.json').dependencies.react"
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:all",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "beforeEach": "readonly",
+        "it": "readonly",
+        "expect": "readonly",
+        "describe": "readonly",
+        "jest": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "array-element-newline": "off",
+        "avoidEscape": true,
+        "no-extra-parens": [
+            "error",
+            "all",
+            {
+                "ignoreJSX": "all"
+            }
+        ],
+        "no-underscore-dangle": "off",
+        "sort-vars": "off",
+        "no-process-env": "off",
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "keyword-spacing": "off",
+        "dot-location": ["error", "property"],
+        "no-magic-numbers": ["error", { "ignore": [0] }],
+        "object-curly-spacing": ["error", "always"],
+        "one-var": "off",
+        "prefer-destructuring": "off",
+        "no-invalid-this": "off",
+        "padded-blocks": "off",
+        "no-case-declarations": "off",
+        "quote-props": ["error", "consistent"],
+        "space-before-function-paren": ["error", "never"],
+        "sort-imports": "off",
+        "sort-keys": "off",
+        "max-len": ["error", 150],
+        "no-ternary": "off",
+        "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "multiline-ternary": ["error", "always-multiline"],
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "semi": ["error", "always"]
+    },
+    "overrides": [
+        {
+            "files": ["*.test.js"],
+            "rules": {
+                "no-magic-numbers": "off",
+                "init-declarations": "off",
+                "max-lines": "off",
+                "no-undefined": "off"
+            }
+        },
+        {
+            "files": ["*.mock.js"],
+            "rules": {
+                "no-magic-numbers": "off",
+                "max-lines": "off"
+            }
+        }
+    ]
+}
